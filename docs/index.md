@@ -4,21 +4,23 @@ layout: home
 
 hero:
   name: "博客"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  tagline: 日常、技术实践与算法思考
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: 日常
+      link: /daily/latest
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 指南
+      link: /guide
+    - theme: alt
+      text: 算法
+      link: /algorithm
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 日常
+    details: 学习、工作、运动、消费
+  - title: 指南
+    details: 用法、配置、模板
+  - title: 算法
+    details: 题解、思路
 ---
