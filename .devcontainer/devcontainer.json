@@ -2,6 +2,7 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
+  "runArgs": ["--network=host"],
   "remoteUser": "node",
   "workspaceMount": "source=${localWorkspaceFolder},target=/home/node/workspace/${localWorkspaceFolderBasename},type=bind,consistency=cached",
   "workspaceFolder": "/home/node/workspace/${localWorkspaceFolderBasename}",
