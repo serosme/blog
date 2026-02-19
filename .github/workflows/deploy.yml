@@ -1,0 +1,63 @@
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build VitePress
+        run: npm run docs:build
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: vitepress-build
+          path: docs/.vitepress/dist
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CF_PAGES_PROJECT: blog
+      CF_PRODUCTION_BRANCH: main
+
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: vitepress-build
+          path: dist
+
+      - name: Install Wrangler CLI
+        run: npm install -g wrangler
+
+      - name: Ensure Cloudflare Pages project exists
+        run: |
+          if ! wrangler pages project list --json | jq -e 'map(."Project Name") | contains(["'"$CF_PAGES_PROJECT"'"])' >/dev/null; then
+              wrangler pages project create $CF_PAGES_PROJECT --production-branch=$CF_PRODUCTION_BRANCH
+          fi
+
+      - name: Deploy to Cloudflare Pages
+        run: wrangler pages deploy dist --project-name=$CF_PAGES_PROJECT --branch=$CF_PRODUCTION_BRANCH
