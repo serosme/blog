@@ -9,12 +9,12 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "usernamehw.errorlens",
-        "streetsidesoftware.code-spell-checker",
-        "esbenp.prettier-vscode",
-        "EditorConfig.EditorConfig",
+        "davidanson.vscode-markdownlint",
         "dbaeumer.vscode-eslint",
-        "Vue.volar"
+        "editorconfig.editorconfig",
+        "esbenp.prettier-vscode",
+        "streetsidesoftware.code-spell-checker",
+        "usernamehw.errorlens"
       ]
     }
   }
