@@ -19,7 +19,8 @@
         "esbenp.prettier-vscode",
         "streetsidesoftware.code-spell-checker",
         "usernamehw.errorlens",
-        "vitest.explorer"
+        "vitest.explorer",
+        "openai.chatgpt"
       ]
     }
   }
