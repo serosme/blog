@@ -14,7 +14,7 @@ hero:
       link: /guide
     - theme: alt
       text: 算法
-      link: /algorithm
+      link: /algorithm/toc
 
 features:
   - title: 日常
