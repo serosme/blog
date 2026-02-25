@@ -18,7 +18,8 @@
         "editorconfig.editorconfig",
         "esbenp.prettier-vscode",
         "streetsidesoftware.code-spell-checker",
-        "usernamehw.errorlens"
+        "usernamehw.errorlens",
+        "vitest.explorer"
       ]
     }
   }
