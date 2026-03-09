@@ -15,12 +15,12 @@
   "customizations": {
     "vscode": {
       "extensions": [
+        "bradlc.vscode-tailwindcss",
         // "charliermarsh.ruff",
         "davidanson.vscode-markdownlint",
         "dbaeumer.vscode-eslint",
         "editorconfig.editorconfig",
         "esbenp.prettier-vscode",
-        "github.copilot-chat",
         "github.vscode-github-actions",
         "ms-azuretools.vscode-containers",
         "ms-ceintl.vscode-language-pack-zh-hans",
@@ -33,8 +33,8 @@
         "ms-vscode-remote.remote-ssh-edit",
         "ms-vscode-remote.remote-wsl",
         "ms-vscode.remote-explorer",
+        "qwenlm.qwen-code-vscode-ide-companion",
         "redhat.vscode-xml",
-        "usernamehw.errorlens",
         "vitest.explorer",
         "vue.volar"
       ]
