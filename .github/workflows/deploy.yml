@@ -22,8 +22,7 @@ jobs:
           node-version: 24
 
       - name: Enable pnpm
-        run: |
-          corepack prepare pnpm --activate
+        run: corepack enable pnpm
 
       # - name: Setup pnpm
       #   uses: pnpm/action-setup@v4
