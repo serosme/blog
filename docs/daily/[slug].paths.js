@@ -2,9 +2,10 @@ import fs from 'node:fs'
 import path from 'node:path'
 
 const dir = path.resolve('docs/daily')
+const DAILY_FILE_REGEX = /^\d{8}\.md$/
 
 const latest = fs.readdirSync(dir)
-  .filter(f => /^\d{8}\.md$/.test(f))
+  .filter(f => DAILY_FILE_REGEX.test(f))
   .sort()
   .pop()
 
