@@ -16,7 +16,6 @@
     "vscode": {
       "extensions": [
         "bradlc.vscode-tailwindcss",
-        // "charliermarsh.ruff",
         "davidanson.vscode-markdownlint",
         "dbaeumer.vscode-eslint",
         "editorconfig.editorconfig",
@@ -24,10 +23,6 @@
         "github.vscode-github-actions",
         "ms-azuretools.vscode-containers",
         "ms-ceintl.vscode-language-pack-zh-hans",
-        // "ms-python.debugpy",
-        // "ms-python.python",
-        // "ms-python.vscode-pylance",
-        // "ms-python.vscode-python-envs",
         "ms-vscode-remote.remote-containers",
         "ms-vscode-remote.remote-ssh",
         "ms-vscode-remote.remote-ssh-edit",
