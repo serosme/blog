@@ -1,0 +1,38 @@
+{
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "mounts": [
+    "source=${localEnv:HOME}/.config/git,target=/home/node/.config/git,type=bind",
+    "source=${localEnv:HOME}/.ssh,target=/home/node/.ssh,type=bind"
+  ],
+  "runArgs": [
+    "--network=host"
+  ],
+  "remoteUser": "node",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/home/node/workspace/personal/${localWorkspaceFolderBasename},type=bind,consistency=cached",
+  "workspaceFolder": "/home/node/workspace/personal/${localWorkspaceFolderBasename}",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bradlc.vscode-tailwindcss",
+        "davidanson.vscode-markdownlint",
+        "dbaeumer.vscode-eslint",
+        "editorconfig.editorconfig",
+        "esbenp.prettier-vscode",
+        "github.vscode-github-actions",
+        "ms-azuretools.vscode-containers",
+        "ms-ceintl.vscode-language-pack-zh-hans",
+        "ms-vscode-remote.remote-containers",
+        "ms-vscode-remote.remote-ssh",
+        "ms-vscode-remote.remote-ssh-edit",
+        "ms-vscode-remote.remote-wsl",
+        "ms-vscode.remote-explorer",
+        "qwenlm.qwen-code-vscode-ide-companion",
+        "redhat.vscode-xml",
+        "vitest.explorer",
+        "vue.volar"
+      ]
+    }
+  }
+}
