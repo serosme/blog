@@ -7,12 +7,6 @@ hero:
   tagline: 日常、技术实践与算法思考
   actions:
     - theme: brand
-      text: 消费
-      link: /spending/latest
-    - theme: alt
-      text: 运动
-      link: /exercise/latest
-    - theme: alt
       text: 指南
       link: /guide
     - theme: alt

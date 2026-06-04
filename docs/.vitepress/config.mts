@@ -13,12 +13,6 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: '日常',
-        items: [
-          { text: '最新', link: '/daily/latest' },
-        ],
-      },
-      {
         text: '算法',
         collapsed: true,
         items: [
