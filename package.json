@@ -6,7 +6,9 @@
     "test:run": "vitest run",
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
-    "preview": "vitepress preview docs"
+    "preview": "vitepress preview docs",
+    "ncu": "npx npm-check-updates --target minor",
+    "ncuu": "npx npm-check-updates --target minor -u"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^8.3.0",
