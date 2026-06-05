@@ -7,11 +7,11 @@ hero:
   tagline: 算法与指南
   actions:
     - theme: brand
-      text: 指南
-      link: /guide
-    - theme: alt
       text: 算法
-      link: /algorithm/toc
+      link: /algorithm/merge-sorted-array
+    - theme: alt
+      text: 指南
+      link: /guide/docker/reference
 
 # features:
 #   - title: 消费
