@@ -5,33 +5,6 @@ export default defineConfig({
   title: '博客',
   description: 'A VitePress Site',
   cleanUrls: true,
-  vite: {
-    plugins: [
-      {
-        name: 'ubuntu-resolute-deb822',
-        configureServer(server) {
-          server.middlewares.use((req, res, next) => {
-            if (req.originalUrl === '/ubuntu-resolute-deb822') {
-              res.setHeader('Content-Type', 'text/plain')
-              res.end(`
-#!/bin/bash
-sudo tee /etc/apt/sources.list.d/ubuntu.sources > /dev/null << 'EOF'
-Types: deb
-URIs: https://mirrors.ustc.edu.cn/ubuntu
-Suites: resolute resolute-updates resolute-backports resolute-security
-Components: main restricted universe multiverse
-Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
-EOF
-              `.trim())
-            }
-            else {
-              next()
-            }
-          })
-        },
-      },
-    ],
-  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [

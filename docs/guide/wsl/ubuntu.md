@@ -17,5 +17,11 @@ wsl --install --name Ubuntu --from-file .\Downloads\ubuntu-26.04-wsl-amd64.gz
 ## 软件源
 
 ```bash
-bash <(curl -fsSL https://blog.seros.me/ubuntu-resolute-deb822)
+sudo tee /etc/apt/sources.list.d/ubuntu.sources > /dev/null << 'EOF'
+Types: deb
+URIs: https://mirrors.ustc.edu.cn/ubuntu
+Suites: resolute resolute-updates resolute-backports resolute-security
+Components: main restricted universe multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+EOF
 ```
